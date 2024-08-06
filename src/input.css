@@ -21,11 +21,39 @@
   }
 
   .nav-link-list {
-    @apply flex gap-20 items-center font-bold;
+    @apply flex gap-20 items-center;
   }
 
   .nav-link {
     @apply text-[20pt] text-white hover:text-pink-400 transition duration-200;
+  }
+
+  .hero-container {
+    @apply h-[85vh] w-full relative overflow-hidden font-vogue;
+  }
+
+  .hero-title {
+    @apply absolute z-10 text-main text-[96pt] leading-none text-center left-[5vh] top-[50%] translate-y-[-50%];
+  }
+
+  .hero-img {
+    @apply absolute -translate-y-[120px];
+  }
+
+  .overview-container {
+    @apply grid grid-cols-2 gap-8 items-center;
+  }
+
+  .overview-img {
+    @apply hover:scale-110 transition duration-300;
+  }
+
+  .overview-txt {
+    @apply text-[24pt] text-brown-light;
+  }
+
+  .overview-img {
+    @apply flex justify-center h-[50vh] w-fit rounded-lg overflow-hidden;
   }
 
   .contact-card {
@@ -46,6 +74,18 @@
 
   p.about-text {
     @apply text-[20pt];
+  }
+
+  .product-container {
+    @apply w-[400px] h-[400px] rounded-lg relative overflow-hidden;
+  }
+
+  .home-product-title {
+    @apply w-max py-2 px-8 absolute z-10 bottom-[40px] left-[50%] translate-x-[-50%] bg-white text-brown text-center hover:bg-main hover:text-white transition-all duration-300;
+  }
+
+  .home-product-img {
+    @apply absolute scale-[2] translate-y-[60px];
   }
 
   .footer-top {

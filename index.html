@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cerewet Craft</title>
 
     <link rel="stylesheet" href="./src/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -25,127 +30,161 @@
     </nav>
 
     <!-- Main section -->
-    <main>
-      <div class="py-28 px-20">
-        <!-- Main Title -->
-        <div class="text-center text-[48pt]">
-          <h1>Kontak Kami</h1>
+    <main class="selection:bg-main selection:text-white">
+      <!-- MARK: HERO -->
+      <!-- Hero -->
+      <div class="hero-container">
+        <!-- Title -->
+        <div
+          class="hero-title animate__animated animate__fadeIn animate__delay-1s"
+        >
+          <h1>
+            Modern <br />
+            Design <br />
+            Craft
+          </h1>
         </div>
 
-        <!-- Socmed  card -->
-        <div class="flex flex-wrap gap-12 justify-center items-center my-16">
-          <!-- Contact icon -->
-          <!-- Instagram -->
-          <div class="contact-card group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="156"
-              height="156"
-              viewBox="0 0 24 24"
-              class="contact-logo"
-            >
-              <path
-                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+        <img
+          src="./../assets/img/hero.jpg"
+          alt="Hero Image"
+          class="hero-img animate__animated animate__fadeIn"
+        />
+
+        <div
+          class="absolute text-[22pt] text-center text-white animate__animated animate__fadeIn animate__delay-2s w-[50vh] right-[10vh] top-[50%] translate-y-[-50%]"
+        >
+          <h3 class="mb-10">
+            Dapatkan inspirasimu dari bahan yang ramah lingkungan.
+          </h3>
+
+          <a
+            href="#overview"
+            class="px-12 py-4 bg-brown-light rounded-l-full rounded-r-full hover:bg-white hover:text-brown-light transition duration-100"
+            >explore</a
+          >
+        </div>
+      </div>
+
+      <!-- Subhero -->
+      <div
+        class="text-brown text-[24pt] py-6 px-16 text-center font-vogue leading-none"
+      >
+        <h3>
+          Kayu MDF medium-density fiberboard. Papan kayu ini terbuat dari
+          serpihan kayu lalu diolah hingga menjadi padat. Hal ini berarti MDF
+          board merupakan jenis kayu yang berasal dari proses pemadatan serpihan
+          kayu.
+        </h3>
+      </div>
+
+      <div id="overview" class="bg-main-light py-8 px-36 font-vogue">
+        <h2 class="text-[48pt] text-center text-brown">
+          Experience CRWT Craft
+        </h2>
+
+        <!-- MARK: OVERVIEW -->
+        <!-- Photo -->
+        <div class="grid grid-rows-3 gap-10 my-10">
+          <!-- Overview 1 -->
+          <div class="overview-container">
+            <!-- Photo -->
+            <div class="overview-img-container">
+              <img
+                src="./assets/img/gambar 1.jpeg"
+                alt="Foto 1"
+                class="overview-img"
               />
-            </svg>
+            </div>
+
+            <div class="overview-txt">
+              Awal mula desain terlebih dahulu setelah selesai desain lalu,
+              masukkan kedalam aplikasi bawain mesin untuk di framing
+            </div>
           </div>
 
-          <!--Tokopedia  -->
-          <div class="contact-card group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="144"
-              height="144"
-              viewBox="0 0 48 48"
-              class="contact-logo stroke-black group-hover:stroke-white"
-            >
-              <path
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M27.043 12.942c-3.43-2.897-16.85-2.247-16.85-2.247l-.473 32.65s17.855.134 23.353 0s9.341-4.508 9.4-7.878s0-24.18 0-24.18c-6.858-.829-11.942-.178-15.43 1.655"
+          <!-- Overview 2 -->
+          <div class="overview-container">
+            <!-- Photo -->
+            <div class="overview-img-container order-last">
+              <img
+                src="./assets/img/gambar 2.jpeg"
+                alt="Foto 1"
+                class="overview-img"
               />
-              <circle
-                cx="19.531"
-                cy="24.172"
-                r="6.976"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M32.043 29.33a6.272 6.272 0 1 0-2.3-1.786m-19.55-16.849l-4.494 3.252L5.5 39.369l4.22 3.977m23.975-32.251a7.796 7.796 0 0 0-15.318-.299"
-              />
-              <path
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M34.396 19.662a2.36 2.36 0 0 1-3.878 2.59a4.194 4.194 0 1 0 3.878-2.59m-13.872.345a2.424 2.424 0 0 1-4.251 2.211a4.31 4.31 0 1 0 4.25-2.21m3.838 11.41c0-2.817 2.031-3.962 4.721-3.962c2.395 0 3.755 3.252 3.755 3.252a18.2 18.2 0 0 1-7.45 1.449a9.9 9.9 0 0 0 5.321 2.542s-.827.62-3.665.62c-2.306.001-2.682-2.453-2.682-3.902"
-              />
-              <path
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M30.317 31.569a10.4 10.4 0 0 1-.258 3.008"
-              />
-            </svg>
+            </div>
+
+            <div class="overview-txt text-right">
+              Setelah itu kayu MDF (Medium Density Fiberboard) dicetak
+              menggunakan laser 3-5 menit.
+            </div>
           </div>
 
-          <!-- Shopee -->
-          <div class="contact-card group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="144"
-              height="144"
-              viewBox="0 0 48 48"
-              class="contact-logo stroke-black group-hover:stroke-white"
-            >
-              <path
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M33.055 43.5h-18.11a4 4 0 0 1-3.973-3.537l-2.588-22.19h31.232l-2.588 22.19a4 4 0 0 1-3.973 3.537M13.352 17.773V15.16a10.66 10.66 0 0 1 21.32 0v2.613"
+          <!-- Overview 3 -->
+          <div class="overview-container">
+            <!-- Photo -->
+            <div class="overview-img-container">
+              <img
+                src="./assets/img/gambar 3.jpeg"
+                alt="Foto 1"
+                class="overview-img"
               />
-              <path
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.529 36.983c1.154.865 2.308 1.153 4.615 1.153h1.154a3.75 3.75 0 0 0 0-7.5h-2.596a3.75 3.75 0 0 1 0-7.5h1.154c2.596 0 3.75.289 4.615 1.154"
-              />
-            </svg>
+            </div>
+
+            <div class="overview-txt">
+              Dan yang terakhir proses egraving (memahat kayu) menggunakan mesin
+              laser.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARK: product -->
+      <!-- Product -->
+      <div class="px-12 py-12 font-vogue">
+        <h2 class="text-[48pt] text-center text-brown">Produk Kami</h2>
+
+        <!-- Foto -->
+        <div class="grid grid-cols-3 gap-2 justify-items-center">
+          <!-- Product 1 -->
+          <div class="product-container group">
+            <img
+              src="./assets/img/home-prod-1.jpg"
+              alt="Foto 1"
+              class="home-product-img group-hover:grayscale group-hover:brightness-50 transition duration-500"
+            />
+
+            <!-- Title product -->
+            <a href="#" class="home-product-title">
+              <h3 class="font-lemon text-[22pt]">SOUVENIR / HADIAH</h3>
+            </a>
           </div>
 
-          <!-- Whatsa[[]] -->
-          <div class="contact-card group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="144"
-              height="144"
-              viewBox="0 0 24 24"
-              class="contact-logo"
-            >
-              <path
-                d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
-              />
-            </svg>
-          </div>
+          <!-- Product 1\2 -->
+          <div class="product-container group">
+            <img
+              src="./assets/img/home-prod-2.jpg"
+              alt="Foto 1"
+              class="home-product-img group-hover:grayscale group-hover:brightness-50 transition duration-500"
+            />
 
-          <!-- Maps -->
-          <div class="contact-card group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="144"
-              height="144"
-              viewBox="0 0 24 24"
-              class="contact-logo"
-            >
-              <path
-                d="M18.27 6c1.01 2.17.78 4.73-.33 6.81c-.94 1.69-2.29 3.12-3.44 4.69c-.5.7-1 1.45-1.37 2.26c-.13.27-.22.55-.32.83s-.19.56-.28.84c-.09.26-.2.57-.53.57c-.39 0-.5-.44-.58-.74c-.24-.73-.48-1.43-.85-2.1c-.42-.79-.95-1.52-1.49-2.23zM9.12 8.42l-3.3 3.92c.61 1.29 1.52 2.39 2.39 3.49c.21.25.42.51.62.78L13 11.67l-.04.01c-1.46.5-3.08-.24-3.66-1.68c-.08-.17-.14-.37-.18-.57a3 3 0 0 1 0-1zm-2.54-3.8l-.01.01c-1.62 2.05-1.9 4.9-.93 7.31L9.63 7.2l-.05-.05zm7.64-2.26L11 6.17l.04-.01c1.34-.46 2.84.12 3.52 1.34c.15.28.27.58.31.88c.06.38.08.65.01 1.02v.01l3.2-3.8a7 7 0 0 0-3.85-3.24zM9.89 6.89l3.91-4.65l-.04-.01C13.18 2.08 12.59 2 12 2c-1.97 0-3.83.85-5.15 2.31l-.02.01z"
-              />
-            </svg>
+            <!-- Title product -->
+            <a href="#" class="home-product-title">
+              <h3 class="font-lemon text-[22pt]">ALAT TULIS</h3>
+            </a>
+          </div>
+          <!-- Product 3 -->
+          <div class="product-container group">
+            <img
+              src="./assets/img/home-prod-3.jpg"
+              alt="Foto 1"
+              class="home-product-img group-hover:grayscale group-hover:brightness-50 transition duration-500"
+            />
+
+            <!-- Title product -->
+            <a href="#" class="home-product-title">
+              <h3 class="font-lemon text-[22pt]">ORGANIZER RUMAH</h3>
+            </a>
           </div>
         </div>
       </div>
