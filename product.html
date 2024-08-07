@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cerewet Craft - Contact</title>
+
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar-container bg-black">
+      <img
+        src="assets/img/logo.jpg"
+        alt="Icon CRWTCraft"
+        class="rounded-full w-[72px]"
+      />
+
+      <div class="nav-link-list">
+        <a href="index.html" class="nav-link" nav="index">BERANDA</a>
+        <a href="about.html" class="nav-link" nav="about">ABOUT</a>
+        <a href="product.html" nav="product" class="nav-link">PRODUK</a>
+        <a href="contact.html" nav="contact" class="nav-link">KONTAK</a>
+      </div>
+    </nav>
+
+    <!-- Main section -->
+    <!-- MARK: Main -->
+    <main>
+      <div class="py-12 px-10">
+        <!-- Product hero -->
+        <div class="h-[200px] rounded-lg overflow-hidden focus:grayscale">
+          <img
+            src="./assets/img/home-prod-3.jpg"
+            alt="Product Hero"
+            class="-translate-y-[50%]"
+          />
+        </div>
+
+        <!-- Product title & dropdown -->
+        <div class="flex justify-between items-center px-16 py-10">
+          <div class="font-vogue text-[28pt] text-main">
+            <h2>Semua Produk</h2>
+          </div>
+
+          <!-- MARK: dropdown -->
+          <div>
+            <button
+              class="font-vogue text-main text-[16pt] bg-white hover:bg-main-light focus:ring-4 focus:ring-main-light rounded-lg px-4 py-2.5 text-center inline-flex items-center"
+              type="button"
+              data-dropdown-toggle="dropdown"
+            >
+              Dropdown button
+              <svg
+                class="w-4 h-4 ml-2 stroke-main"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Dropdown menu -->
+            <!-- MARK: dropdown menu -->
+            <div
+              class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4"
+              id="dropdown"
+            >
+              <div class="px-4 py-3">
+                <span class="block text-sm">Bonnie Green</span>
+                <span class="block text-sm font-medium text-gray-900 truncate"
+                  >name@flowbite.com</span
+                >
+              </div>
+              <ul class="py-1" aria-labelledby="dropdown">
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                    >Settings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                    >Earnings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top"></div>
+
+      <div class="footer-main"></div>
+    </footer>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+
+    <script></script>
+  </body>
+</html>
