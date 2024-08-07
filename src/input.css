@@ -68,6 +68,30 @@
     @apply my-8;
   }
 
+  .product-list-container {
+    @apply grid grid-cols-[repeat(3,25vw)] justify-between gap-10 px-16 py-5 transition-all duration-300;
+  }
+
+  .product-list-container.inactive {
+    @apply opacity-0;
+  }
+
+  .product-card {
+    @apply bg-main-light h-[70vh] rounded-xl px-8 py-12 relative font-lemon tracking-widest hover:ring-main hover:ring-2 active:bg-white active:border-0 transition duration-300 cursor-pointer;
+  }
+
+  .product-title {
+    @apply text-center absolute bottom-20 left-[50%] -translate-x-[50%] text-[20pt] text-brown;
+  }
+
+  .product-price {
+    @apply absolute bottom-8 left-[50%] -translate-x-[50%] text-[16pt] text-main;
+  }
+
+  .product-img-container {
+    @apply flex justify-center;
+  }
+
   h3.about-subtitle {
     @apply text-[36pt] text-main;
   }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,19 +38,23 @@
         </div>
 
         <!-- Product title & dropdown -->
-        <div class="flex justify-between items-center px-16 py-10">
-          <div class="font-vogue text-[28pt] text-main">
+        <!-- MARK: PRODUCT MENU -->
+        <div
+          class="flex justify-between items-center px-16 py-10"
+          id="product-list"
+        >
+          <div class="font-vogue text-[48pt] text-main">
             <h2>Semua Produk</h2>
           </div>
 
           <!-- MARK: dropdown -->
           <div>
             <button
-              class="font-vogue text-main text-[16pt] bg-white hover:bg-main-light focus:ring-4 focus:ring-main-light rounded-lg px-4 py-2.5 text-center inline-flex items-center"
+              class="w-[300px] font-vogue text-main text-[16pt] bg-white hover:bg-main-light focus:ring-4 focus:ring-main-light rounded-lg px-4 py-2.5 text-center inline-flex justify-between items-center"
               type="button"
               data-dropdown-toggle="dropdown"
             >
-              Dropdown button
+              <span id="dropdownMenuButton">Souvenir</span>
               <svg
                 class="w-4 h-4 ml-2 stroke-main"
                 fill="none"
@@ -69,46 +73,56 @@
             <!-- Dropdown menu -->
             <!-- MARK: dropdown menu -->
             <div
-              class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4"
+              class="hidden text-main text-[14pt] font-vogue bg-white z-50 list-none divide-y divide-gray-100 rounded shadow my-4 w-[300px]"
               id="dropdown"
             >
-              <div class="px-4 py-3">
-                <span class="block text-sm">Bonnie Green</span>
-                <span class="block text-sm font-medium text-gray-900 truncate"
-                  >name@flowbite.com</span
-                >
-              </div>
               <ul class="py-1" aria-labelledby="dropdown">
                 <li>
                   <a
                     href="#"
-                    class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                    >Dashboard</a
+                    class="child-menu hover:bg-gray-100 block px-4 py-2"
+                    category="souvenir"
+                    >Souvenir</a
                   >
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                    >Settings</a
+                    class="child-menu hover:bg-gray-100 block px-4 py-2"
+                    category="atk"
+                    >Peralatan Tulis</a
                   >
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                    >Earnings</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                    >Sign out</a
+                    class="child-menu hover:bg-gray-100 block px-4 py-2"
+                    category="organizer"
+                    >Organizer</a
                   >
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+
+        <!-- MARK: PRODUCT LIST -->
+        <!-- Product list -->
+        <div class="product-list-container" id="product-container">
+          <div class="product-card">
+            <div class="product-img-container">
+              <img
+                src="./assets/img/product/organizer/1.png"
+                alt="Prod 1"
+                class=""
+              />
+            </div>
+
+            <div class="product-title">
+              <h4>STORAGE BOX</h4>
+            </div>
+
+            <div class="product-price">Rp. 1.000.000</div>
           </div>
         </div>
       </div>
@@ -123,6 +137,70 @@
 
     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 
-    <script></script>
+    <script src="./assets/js/product.js"></script>
+
+    <script>
+      const childMenus = document.querySelectorAll(".child-menu");
+
+      const dropdown = document.getElementById("dropdownMenuButton");
+
+      const productContainer = document.getElementById("product-container");
+
+      // Default category
+      window.addEventListener("load", (e) => {
+        // Get query param if exists
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get("category");
+
+        productContainer.classList.add("inactive");
+
+        productContainer.innerHTML = "";
+
+        let categoryName;
+        let products;
+
+        if (category) {
+          products = getProductByCode(category);
+          categoryName = products.name;
+        } else {
+          products = productList[0];
+          categoryName = products.name;
+        }
+
+        dropdown.textContent = categoryName;
+
+        createProductCard(products.code);
+
+        // Scroll to product container
+        setTimeout(() => {
+          productContainer.classList.remove("inactive");
+          document.querySelector("#product-list").scrollIntoView();
+        }, 2000);
+      });
+
+      // Fetch product by category
+      childMenus.forEach((childMenu) => {
+        childMenu.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Change main dropdown button text
+          dropdown.textContent = childMenu.textContent;
+
+          // Get products by category
+          const category = childMenu.getAttribute("category");
+
+          productContainer.classList.add("inactive");
+
+          // Clear product container
+          productContainer.innerHTML = "";
+
+          // Generate product card
+          setTimeout(() => {
+            createProductCard(category);
+            productContainer.classList.remove("inactive");
+          }, 500);
+        });
+      });
+    </script>
   </body>
 </html>
