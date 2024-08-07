@@ -888,10 +888,17 @@ p.about-text {
   margin-bottom: 0px;
   height: 4rem;
   width: 100%;
+  cursor: pointer;
   border-top-left-radius: 9999px;
   border-top-right-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(74 51 43 / var(--tw-bg-opacity));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: vogue, sans-serif;
+  font-size: 16pt;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .footer-main {

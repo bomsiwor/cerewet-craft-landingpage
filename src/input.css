@@ -113,7 +113,7 @@
   }
 
   .footer-top {
-    @apply h-16 w-full bg-[#4a332b] rounded-tl-full rounded-tr-full my-0;
+    @apply h-16 w-full bg-[#4a332b] rounded-tl-full rounded-tr-full my-0 text-white py-4 font-vogue text-[16pt] cursor-pointer;
   }
 
   .footer-main {
